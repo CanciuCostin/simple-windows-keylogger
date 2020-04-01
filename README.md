@@ -1,6 +1,6 @@
 # Simple Windows Keylogger
 
-Simple Windows keylogger using C language.
+Simple Windows keylogger using C language
 
 ### Description
 
